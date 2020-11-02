@@ -23,13 +23,13 @@ Route::group(['prefix' => 'company/'], function ($router) {
 
 });
 
-Route::group(['prefix' => 'employees/'], function ($router) {
+Route::group(['prefix' => 'employee/'], function ($router) {
 
-	$router->get('/','EmployeesController@listEmployees');
-	$router->post('/','EmployeesController@createEmployee');
-	$router->get('/{id}','EmployeesController@getEmployee');
-	$router->post('/{id}','EmployeesController@editEmployee');
-	$router->delete('/{id}','EmployeesController@deleteEmployee');
+	$router->get('/','EmployeeController@listEmployees');
+	$router->post('/','EmployeeController@createEmployee');
+	$router->get('/{id}','EmployeeController@getEmployee');
+	$router->post('/{id}','EmployeeController@editEmployee');
+	$router->delete('/{id}','EmployeeController@deleteEmployee');
 
 });
 
