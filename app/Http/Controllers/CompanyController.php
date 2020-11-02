@@ -15,7 +15,15 @@ class CompanyController extends Controller
 
     public function getCompany(Request $request)
     {
-    	return Company::findOrFail($request->id);
+        $company = Company::find($request->id);
+        
+        if(!empty($company))
+        {
+            return $company;
+        }
+
+        return response()->json(['error' => 'Nao foi encontrado'], 404);
+    	// return Company::findOrFail($request->id);
     }
 
     public function createCompany(Request $request)
