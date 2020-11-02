@@ -15,7 +15,17 @@ class EmployeeController extends Controller
 
     public function getEmployee(Request $request)
     {
-    	return Employee::findOrFail($request->id);
+        $employee = Employee::find($request->id);
+        
+        if(!empty($employee))
+        {
+            return $employee;
+        }
+
+        return response()->json(['error' => 'Nao foi encontrado'], 404);
+
+        // return Employee::findOrFail($request->id);
+        
     }
 
     public function createEmployee(Request $request)
