@@ -13,7 +13,8 @@ class Company extends Model
         'name', 'cnpj', 'address',
     ];
 
-    public function employees(){
-        return $this->hasMany('App\Employee');
+public function employees()
+    { 
+        return $this->hasMany('App\Employee', 'companies_id', 'id'); 
     }
 }
