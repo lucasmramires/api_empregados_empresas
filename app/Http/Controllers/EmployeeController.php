@@ -22,7 +22,7 @@ class EmployeeController extends Controller
             return $employee;
         }
 
-        return response()->json(['error' => 'Nao foi encontrado'], 404);
+        return response()->json(['error' => 'Não foi encontrado'], 404);
 
         // return Employee::findOrFail($request->id);
         

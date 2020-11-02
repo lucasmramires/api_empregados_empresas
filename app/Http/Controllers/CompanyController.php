@@ -23,8 +23,7 @@ class CompanyController extends Controller
             return $company;
         }
 
-        return response()->json(['error' => 'Nao foi encontrado'], 404);
-    	// return Company::findOrFail($request->id);
+        return response()->json(['error' => 'Não foi encontrado'], 404);
     }
 
     public function createCompany(Request $request)
