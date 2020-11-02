@@ -23,9 +23,7 @@ class EmployeeController extends Controller
         }
 
         return response()->json(['error' => 'Não foi encontrado'], 404);
-
-        // return Employee::findOrFail($request->id);
-        
+ 
     }
 
     public function createEmployee(Request $request)

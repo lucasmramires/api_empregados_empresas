@@ -25,5 +25,6 @@ Sirva sua API com o comando php artisan serve.
 Utilizado o framework Laravel 5.7.29 para o desenvolvimento do sistema.
 
 ## Requisitos
-Laravel 5.7.29 
-10.4.14-MariaDB
+Laravel 5.7.29.
+
+10.4.14-MariaDB.
