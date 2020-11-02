@@ -16,6 +16,7 @@ class CompanyController extends Controller
     public function getCompany(Request $request)
     {
         $company = Company::find($request->id);
+        $company->employees;
         
         if(!empty($company))
         {
